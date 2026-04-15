@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Site de la 40e de Bierges - Full Stack",
   "scripts": {
-    "build": "cd api && npm install && cd ../40bierges && npm install && NODE_OPTIONS=--openssl-legacy-provider npm run build && cd .. && npm run postbuild",
+    "build": "cd api && npm install && cd ../40bierges && npm install && npm run build && cd .. && npm run postbuild",
     "postbuild": "rm -rf api/public && cp -r 40bierges/build api/public",
     "start": "cd api && npm start"
   },
