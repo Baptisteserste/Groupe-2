@@ -48,12 +48,12 @@ npm start
 2. Attendez la fin du build (~5-10 minutes)
 3. Votre site sera disponible à : `https://votre-app.onrender.com`
 
-## 🔐 Comptes de test
+## 🔐 Authentification
 
-Une fois déployé, vous pouvez vous connecter avec :
+Le site nécessite une connexion pour accéder aux fonctionnalités.
+Les comptes sont définis dans `api/data.json` avec des mots de passe hashés (bcrypt).
 
-- **Admin** : `test@test.com` / `test123`
-- **User** : `user1@gmail.com` / *mot de passe inconnu*
+**Note pour Red/Blue Team** : Trouvez les identifiants par vous-même ! 🕵️
 
 ## ⚙️ Architecture du déploiement
 

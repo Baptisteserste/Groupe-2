@@ -23,7 +23,7 @@
     {
         "id" : 4,
         "mail" : "test@test.com",
-        "password" : "$2b$12$XvzirX0VbgtFDdtdfsjvyOdJgt9hjKoOzfXr9R78MgJsY3rDS/8CS",
+        "password" : "$2b$12$VEjrUuTcq.am7R3IrRDZ3OuD16VPqZsia4G2gE9DZPxxNO5RG81QK",
         "role" : "admin",
         "secret" : "Nouveau compte de test créé !"
     }
