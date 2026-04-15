@@ -16,10 +16,16 @@ class Login extends React.Component {
       password: "",
       error: "",
       isLoading: false,
+      showPassword: false,
       url: getApiUrl()
     };
     this.handleConnect = this.handleConnect.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
+  }
+
+  togglePasswordVisibility() {
+    this.setState({ showPassword: !this.state.showPassword });
   }
 
   componentDidMount() {
@@ -115,17 +121,42 @@ class Login extends React.Component {
 
           <div className="form-group">
             <label className="form-label" htmlFor="login-password">Mot de passe</label>
-            <input
-              id="login-password"
-              className="form-input"
-              type="password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-              onKeyDown={this.handleKeyDown}
-              placeholder="••••••••"
-              autoComplete="current-password"
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                id="login-password"
+                className="form-input"
+                type={this.state.showPassword ? "text" : "password"}
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+                onKeyDown={this.handleKeyDown}
+                placeholder="••••••••"
+                autoComplete="current-password"
+                style={{ paddingRight: '45px' }}
+              />
+              <button
+                type="button"
+                onClick={this.togglePasswordVisibility}
+                style={{
+                  position: 'absolute',
+                  right: '10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '18px',
+                  padding: '5px',
+                  opacity: '0.6',
+                  transition: 'opacity 0.2s'
+                }}
+                onMouseEnter={(e) => e.target.style.opacity = '1'}
+                onMouseLeave={(e) => e.target.style.opacity = '0.6'}
+                aria-label={this.state.showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
+              >
+                {this.state.showPassword ? '🙈' : '👁️'}
+              </button>
+            </div>
           </div>
 
           <button
