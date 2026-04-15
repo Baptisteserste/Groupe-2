@@ -36,5 +36,8 @@
   },
   "optionalDependencies": {
     "typescript": "3.5.2"
+  },
+  "overrides": {
+    "lodash.template": "4.5.0"
   }
 }
