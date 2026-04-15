@@ -1,0 +1,14 @@
+{
+  "name": "40e-de-bierges-fullstack",
+  "version": "1.0.0",
+  "description": "Site de la 40e de Bierges - Full Stack",
+  "scripts": {
+    "install-all": "cd api && npm install && cd ../40bierges && npm install",
+    "build": "cd 40bierges && npm run build && cd .. && npm run postbuild",
+    "postbuild": "rm -rf api/public && cp -r 40bierges/build api/public",
+    "start": "cd api && npm start"
+  },
+  "engines": {
+    "node": ">=14.x"
+  }
+}

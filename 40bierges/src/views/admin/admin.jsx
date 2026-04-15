@@ -14,7 +14,7 @@ class Admin extends React.Component {
             token: "",
             userList: [],
             isLoading: true,
-            url: "http://localhost:3001"
+            url: getApiUrl()
         };
         this.toggleSecret = this.toggleSecret.bind(this);
     }

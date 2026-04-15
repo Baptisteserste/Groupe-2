@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import '../../assets/css/main.css';
 import tools from "../../toolBox";
 import axios from "axios";
+import getApiUrl from "../../config";
 
 class Blog extends React.Component {
 
@@ -15,7 +16,7 @@ class Blog extends React.Component {
       token: "",
       isLoading: true,
       isSending: false,
-      url: "http://localhost:3001"
+      url: getApiUrl()
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSend = this.handleSend.bind(this);

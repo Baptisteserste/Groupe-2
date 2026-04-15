@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: 40e-de-bierges
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ACCESS_TOKEN_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000

@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import '../../assets/css/main.css';
 import tools from "../../toolBox";
 import axios from "axios";
+import getApiUrl from "../../config";
 
 class Login extends React.Component {
 
@@ -15,7 +16,7 @@ class Login extends React.Component {
       password: "",
       error: "",
       isLoading: false,
-      url: "http://localhost:3001"
+      url: getApiUrl()
     };
     this.handleConnect = this.handleConnect.bind(this);
     this.handleChange = this.handleChange.bind(this);
